@@ -1,0 +1,40 @@
+:root {
+    --darksalmao: rgb(233, 150, 122);
+    --darkblue: rgb(0, 0, 139);
+}
+
+.josefin-sans-meu_projeto {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+header {
+    background-color: var(--darkblue);
+}
+
+nav {
+    background-color: var(--darksalmao);
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: right;
+    color: var(--darkblue);
+    font-weight: bold;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+#btn_login {
+    color: salmon;
+    background-color: white;
+    border-radius: 7px;
+}
+
+#btn_login:hover {
+    background-color: var(--darkblue);
+    color: white;
+}
