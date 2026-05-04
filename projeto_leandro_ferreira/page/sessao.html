@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <!-- Josefin Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <!-- bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Meu css -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <title>Minha Lista de Tarefas</title>
+</head>
+
+<body>
+    <header>
+        <!-- Início Navbar do Bootstrap - OffCanvas-->
+        <nav class="navbar fixed-top" id="navbar-login">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../page/index.html">Minha Lista de Tarefas</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Início Menu do OffCanvas -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Olá, "nome do utilizador"!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+
+                                <!-- Trigger Button do Tabs - Minhas Tarefas -->
+                                <a class="nav-link" aria-current="page" href="#" data-bs-toggle="collapse"
+                                    data-bs-target="#exampleTabsMeuTarefa"><i class="bi bi-folder2-open me-1"></i>Minhas
+                                    tarefas</a>
+
+                            </li>
+                            <li class="nav-item">
+
+                                <!-- Trigger Button do Modal - tarefa adicionada -->
+                                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                        class="bi bi-file-earmark-plus me-1"></i>Nova tarefa</a>
+                            </li>
+                            <li class="nav-item">
+
+                                <!-- Trigger Button do Modal - Histórico de Tarefas -->
+                                <a class="nav-link" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModalHistorico"><i class="bi bi-archive me-1"></i>Histórico
+                                    de tarefas</a>
+
+                            </li>
+                            <li class="nav-item">
+                                <!-- Trigger Button do Modal - Gerir conta -->
+                                <a class="nav-link" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModalGerir"><i class="bi bi-gear me-1"></i>Gerir conta</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="bi bi-door-open me-1"></i>Encerrar sessão</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Buscar..."
+                                aria-label="Search" />
+                            <button class="btn btn-primary px-4" type="button"><i class="bi bi-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Fim Menu do OffCanvas-->
+            </div>
+        </nav>
+        <!-- Fim do Navbar do Bootstrap - OffCanvas -->
+    </header>
+
+    <main>
+        <div class="container-sm-md-lg">
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container-fluid fixed-bottom">
+            <p>&copy;2026 Leandro Ferreira - Minha Lista de Tarefas</p>
+        </div>
+    </footer>
+
+    <!-- Início Modal - formulário de Adicionar Tarefa -->
+    <div class="modal fade modal-personalizado" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Início <form> -->
+                <form id="meu-formulario-nova-tarefa" action="" method="get">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Nova tarefa</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div id="campos-nova-tarefa">
+                            <!-- Dia -->
+                            <div class="mb-3">
+                                <label for="form-dia" class="form-label">Dia</label>
+                                <input class="form-control" id="form-dia" rows="3" type="number"
+                                    min="1" max="31" step="1"></input>
+                            </div>
+
+                            <!-- Mês -->
+                            <div class="mb-3">
+                                <label for="form-mes" class="form-label">Mês</label>
+                                <input class="form-control" id="form-mes" rows="3" type="number"
+                                    min="1" max="12" step="1"></input>
+                            </div>
+
+                            <!-- Ano -->
+                            <div class="mb-3">
+                                <label for="form-ano" class="form-label">Ano</label>
+                                <input class="form-control" id="form-ano" rows="3" type="number"
+                                    min="0" step="1"></input>
+                            </div>
+                        </div>
+
+                        <div id="campos-nova-tarefa">
+                            <!-- Hora(s) -->
+                            <div class="mb-3">
+                                <label for="form-hora" class="form-label">Hora(s)</label>
+                                <input class="form-control" id="form-hora" rows="3" type="number"
+                                    min="0" max="23" step="1"></input>
+                            </div>
+
+                            <!-- Minuto(s) -->
+                            <div class="mb-3">
+                                <label for="form-minuto" class="form-label">Minuto(s)</label>
+                                <input class="form-control" id="form-minuto" rows="3" type="number"
+                                    min="0" max="59" step="1"></input>
+                            </div>
+                        </div>
+
+                        <!-- Nova tarefa -->
+                        <div class="mb-3">
+                            <label for="form-tarefa" class="form-label">Tarefa</label>
+                            <textarea class="form-control" id="form-tarefa" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Check do Bootstrap - Receber email de notificação -->
+                    <div class="form-check">
+                        <input class="form-check-input ms-0" type="checkbox" value="" id="checkDefault">
+                        <label class="form-check-label ms-2" for="checkDefault">
+                            Receber email de notificação
+                        </label>
+                    </div>
+
+                    <span id="mensagem-erro1" style="color: red; display: none; margin-top: 10px;"></span>
+
+                    <div class="modal-footer">
+                        <button id="btn-cancelar-rgisto" type="button" class="btn btn-light btn-light-personalizado"
+                            data-bs-dismiss="modal">Cancelar</button>
+
+                        <!-- Trigger Button do Toast da notificação de nova tarefa adicionada -->
+                        <button type="submit" class="btn btn-primary" onclick="validarFormulario()">Guardar</button>
+
+                    </div>
+                </form>
+                <!-- Fim <form> -->
+
+            </div>
+        </div>
+    </div>
+    <!-- Fim Modal --->
+
+    <!-- Início Toast - notificação de nova tarefa adicionada -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" id="meu-toast">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="../assets/img/favicon.ico" class="rounded me-2" alt="Ícone lista de tarefas" id="icone-toast">
+                <strong class="me-auto">Minha Lista de Tarefas</strong>
+                <small>Agora mesmo</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Tarefa guardada
+            </div>
+        </div>
+    </div>
+    <!-- Fim Toast -->
+
+    <!-- Início minha <div> - Criei esta <div> para personalizar o Tabs -->
+    <div class="tabs-container-meu position-relative collapse" id="exampleTabsMeu">
+        <!-- Button do Bootstrap que elimina o Tabs -->
+        <button class="btn btn-close position-absolute top-0 end-0 m-3" style="z-index: 1050;" data-bs-toggle="collapse"
+            data-bs-target="#exampleTabsMeu"></button>
+
+        <div id="ano-tabs">
+            <p>Ano:</p>
+        </div>
+        <!-- Início Tabs do Bootstrap - resultado do Histórico de Tarefas -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active nav-link-meu" id="mes01-tab" data-bs-toggle="tab"
+                    data-bs-target="#mes01-tab-pane" type="button" role="tab" aria-controls="mes01-tab-pane"
+                    aria-selected="true">Janeiro</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link nav-link-meu" id="mes02-tab" data-bs-toggle="tab"
+                    data-bs-target="#mes02-tab-pane" type="button" role="tab" aria-controls="mes02-tab-pane"
+                    aria-selected="false">Fevereiro</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link nav-link-meu" id="mes03-tab" data-bs-toggle="tab"
+                    data-bs-target="#mes03-tab-pane" type="button" role="tab" aria-controls="mes03-tab-pane"
+                    aria-selected="false">Março</button>
+            </li>
+
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="mes01-tab-pane" role="tabpanel" aria-labelledby="mes01-tab"
+                tabindex="0">
+                Dia 17 - Marcação nas Finanças.<br>
+                Dia 25 - Reunião de pais.<br>
+                Dia 29 - Marcação oficina.
+            </div>
+            <div class="tab-pane fade" id="mes02-tab-pane" role="tabpanel" aria-labelledby="mes02-tab" tabindex="0">
+                Dia 13 - Marcação consulta médica.<br>
+                Dia 18 - Festa aniversário.<br>
+                Dia 30 - Almoço de negócios.
+            </div>
+            <div class="tab-pane fade" id="mes03-tab-pane" role="tabpanel" aria-labelledby="mes03-tab" tabindex="0">
+                Dia 07 - Tosquia do cão.<br>
+                Dia 12 - Reunião de condomínio.<br>
+                Dia 27 - Inspeção da carrinha.
+            </div>
+        </div>
+        <!-- Fim Tabs do Bootstrap -->
+    </div>
+    <!-- Fim minha <div> -->
+
+    <!-- Início Modal do Bootstrap - Histórico de Tarefas -->
+    <div class="modal fade modal-personalizado" id="exampleModalHistorico" tabindex="-1"
+        aria-labelledby="exampleModalHistorico" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Início <form> -->
+                <form action="" method="get">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Histórico de Tarefas</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <!-- Ano -->
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Ano</label>
+                            <input class="form-control" id="input-ano" rows="3" placeholder="Informe o ano a buscar"
+                                type="number" style="width: 210px;" min="0" step="1" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btn-cancelar-rgisto" type="button" class="btn btn-light btn-light-personalizado"
+                            data-bs-dismiss="modal">Cancelar</button>
+
+                        <!-- Trigger Button do Accordion - resultado de busca por ano do Histórico de Tarefas -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="collapse"
+                            data-bs-target="#exampleTabsMeu" onclick="obterAno()">Buscar</button>
+
+                    </div>
+                </form>
+                <!-- Fim <form> -->
+
+            </div>
+        </div>
+    </div>
+    <!-- Fim Modal do Bootstrap -->
+
+    <!-- Início minha <div> - Criei esta <div> para personalizar o Tabs -->
+    <div class="tabs-container-meu position-relative collapse" id="exampleTabsMeuTarefa">
+        <!-- Button do Bootstrap que elimina esta Tabs -->
+        <button class="btn btn-close position-absolute top-0 end-0 m-3" style="z-index: 1050;" data-bs-toggle="collapse"
+            data-bs-target="#exampleTabsMeuTarefa"></button>
+
+        <div id="ano-tabs">
+            <p>Ano: 2026</p>
+        </div>
+        <!-- Início Tabs do Bootstrap - Minhas Tarefas -->
+
+        <ul class="nav nav-tabs" id="myTabTarefa" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active nav-link-meu" id="mes01t-tab" data-bs-toggle="tab"
+                    data-bs-target="#mes01t-tab-pane" type="button" role="tab" aria-controls="mes01t-tab-pane"
+                    aria-selected="true">Junho</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link nav-link-meu" id="mes02t-tab" data-bs-toggle="tab"
+                    data-bs-target="#mes02t-tab-pane" type="button" role="tab" aria-controls="mes02t-tab-pane"
+                    aria-selected="false">Julho</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link nav-link-meu" id="mes03t-tab" data-bs-toggle="tab"
+                    data-bs-target="#mes03t-tab-pane" type="button" role="tab" aria-controls="mes03t-tab-pane"
+                    aria-selected="false">Agosto</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent1">
+            <div class="tab-pane fade show active" id="mes01t-tab-pane" role="tabpanel" aria-labelledby="mes01t-tab" tabindex="0">
+                <p>Dia 17 - 10:00 - Marcação nas Finanças.<a href=""><i class="bi bi-pencil ms-3"></i><i class="bi bi-trash ms-3"></i></a></p>
+                <p>Dia 25 - 16:00 - Reunião de pais.<a href=""><i class="bi bi-pencil ms-3"></i><i class="bi bi-trash ms-3"></i></a></p>
+                <p>Dia 29 - 09:00 - Marcação oficina.<a href=""><i class="bi bi-pencil ms-3"></i><i class="bi bi-trash ms-3"></i></a></p>
+            </div>
+            <div class="tab-pane fade" id="mes02t-tab-pane" role="tabpanel" aria-labelledby="mes02t-tab" tabindex="0">
+                <p>Dia 13 - 09:00 - Marcação consulta médica.<a href=""><i class="bi bi-pencil ms-3"></i><i class="bi bi-trash ms-3"></i></a></p>
+                <p>Dia 18 - 18:00 - Festa aniversário.<a href=""><i class="bi bi-pencil ms-3"></i><i class="bi bi-trash ms-3"></i></a></p>
+                <p>Dia 30 - 12:00 - Almoço de negócios.<a href=""><i class="bi bi-pencil ms-3"></i><i class="bi bi-trash ms-3"></i></a></p>
+            </div>
+            <div class="tab-pane fade" id="mes03t-tab-pane" role="tabpanel" aria-labelledby="mes03t-tab" tabindex="0">
+                <p>Dia 07 - 10:00 - Tosquia do cão.<a href=""><i class="bi bi-pencil ms-3"></i><i class="bi bi-trash ms-3"></i></a></p>
+                <p>Dia 12 - 15:00 - Reunião de condomínio.<a href=""><i class="bi bi-pencil ms-3"></i><i class="bi bi-trash ms-3"></i></a></p>
+                <p>Dia 27 - 11:00 - Inspeção da carrinha.<a href=""><i class="bi bi-pencil ms-3"></i><i class="bi bi-trash ms-3"></i></a></p>
+            </div>
+        </div>
+
+        <!-- Fim Tabs do Bootstrap -->
+    </div>
+    <!-- Fim minha <div> -->
+
+    <!-- Início Modal - Gerir conta -->
+    <div class="modal fade modal-personalizado" id="exampleModalGerir" tabindex="-1" aria-labelledby="exampleModalGerir"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Início <form> -->
+                <form action="" method="get">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Gerir conta</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="campos-nova-tarefa">
+                            <!-- Nome de utilizador -->
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label"><i
+                                        class="bi bi-person-fill-gear me-3"></i>Nome de utilizador<a href=""><i
+                                            class="bi bi-pencil ms-3"></i></a><label />
+                            </div>
+                        </div>
+                        <div id="campos-nova-tarefa">
+                            <!-- Palavra-passe -->
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label"><i
+                                        class="bi bi-door-closed me-3"></i>Palavra-passe<a href=""><i
+                                            class="bi bi-pencil ms-3"></i></a></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btn-cancelar-rgisto" type="button" class="btn btn-light btn-light-personalizado"
+                            data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                </form>
+                <!-- Fim <form> -->
+            </div>
+        </div>
+    </div>
+    <!-- Fim Modal --->
+
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Meu js -->
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

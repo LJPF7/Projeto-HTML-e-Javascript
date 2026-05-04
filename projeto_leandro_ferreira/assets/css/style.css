@@ -1,0 +1,175 @@
+:root {
+    --darksalmao: rgb(233, 150, 122);
+    --darksalmao70: rgba(233, 150, 122, 0.8);
+    --darkblue: rgb(0, 0, 139);
+    --branco: rgb(255, 255, 255);
+}
+
+.josefin-sans-meu-projeto {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.dancing-script-meu-projeto {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header,
+footer {
+    font-family: "Josefin Sans", sans-serif;
+    ;
+}
+
+main {
+    font-family: "Josefin Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar-login {
+    background-color: var(--darksalmao);
+}
+
+.btn-light-personalizado {
+    color: var(--branco);
+    background-color: var(--darksalmao);
+}
+
+
+.modal-personalizado .modal-header {
+    background-color: var(--branco);
+}
+
+.modal-personalizado .modal-content {
+    background-color: var(--darksalmao);
+}
+
+#mensagem-bem-vindo {
+    font-family: "Dancing Script", cursive;
+    font-size: 100px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#imagem-lista-tarefas {
+    display: block;
+    /* Faz com que a imagem ocupe a sua própria linha */
+    margin: 20px auto;
+    /* O "auto" centra a imagem horizontalmente */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;  /* Define uma altura fixa */
+    background-color: var(--darksalmao);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;  /* Garante que fica por cima de tudo */
+    padding-top: 2%;
+}
+
+.btn-primary:hover {
+    background-color: var(--darkblue);
+}
+
+.btn-info:hover {
+    background-color: darkcyan;
+}
+
+.alert-primary-meu {
+    color: black;
+    background-color: var(--darksalmao70);
+    border: none;
+}
+
+#mensagem-sobre-imagem {
+    position: fixed;
+    /* Fixa o Alert em relação à janela do navegador */
+    top: 35%;
+    /* Move para o meio da altura */
+    left: 50%;
+    /* Move para o meio da alrgura */
+    transform: translate(-50%, -50%);
+    /* Garante o centro matemático exato */
+    z-index: 1050;
+    /*Garante que fica por cima de tudo (camada superior) */
+    width: fit-content;
+    /* Ajusta o tamanho ao texto */
+    margin: 0;
+    /* Remove as margens que possam desviar o centro */
+    font-size: 25px;
+}
+
+.offcanvas {
+    background-color: var(--darksalmao) !important;
+}
+
+.offcanvas-body .nav-link:hover {
+    color: var(--darkblue) !important;
+}
+
+.toast-container .toast-header {
+    background-color: var(--darksalmao);
+}
+
+small {
+    color: var(--darkblue);
+}
+
+#campos-nova-tarefa {
+    display: flex;  /* Transforma um elemento num contêiner flexível (flex container) e
+                    organiza automaticamente os seus elementos filhos (flex itens) em linha (por defeito) */
+    gap: 10px;
+}
+
+#icone-toast {
+    width: 30px;
+    height: 30px;
+}
+
+.tabs-container-meu {
+    margin-top: 5%;
+    background-color: var(--darksalmao);
+    border-radius: 7px;
+    padding: 3%;
+    width: 40%;
+    justify-self: center;
+    height: 20%;
+}
+
+.tab-content {
+    padding: 2%;
+    background-color: var(--branco);
+    min-height: 100px;
+    height: auto;
+    overflow: visible;
+}
+
+.nav-link-meu {
+    border: 1px var(--branco);
+    color: var(--branco);
+    
+}
+
+#ano-tabs {
+    background-color: var(--branco);
+    color: black;
+    font-size: 25px;
+    border-radius: 7px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-bottom: 1%;
+    padding-left: 3%;
+}
