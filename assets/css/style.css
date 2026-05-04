@@ -62,7 +62,7 @@ main {
     display: block;
     /* Faz com que a imagem ocupe a sua própria linha */
     margin: 20px auto;
-    /* O 'auto' centra a imagem horizontalmente */
+    /* O "auto" centra a imagem horizontalmente */
 }
 
 footer {
@@ -108,7 +108,7 @@ footer {
     width: fit-content;
     /* Ajusta o tamanho ao texto */
     margin: 0;
-    /* Remove as margens que possma desviar o centro */
+    /* Remove as margens que possam desviar o centro */
     font-size: 25px;
 }
 
