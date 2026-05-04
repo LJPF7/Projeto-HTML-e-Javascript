@@ -1,7 +1,7 @@
 function mostrarTexto() {
     // Mostrar o texto quando o cursor do rato deixa a imagem Lista de Tarefas do Main -->
     let mensagem = document.getElementById("mensagem-sobre-imagem")
-    mensagem.innerText = "Regista-te para adicionar\ntarefas ou acede tua sessão\npara gerir tuas tarefas"
+    mensagem.innerText = "Regista-te para adicionar\ntarefas ou acede a tua sessão\npara gerir tuas tarefas"
     mensagem.classList.remove("d-none")
 }
 

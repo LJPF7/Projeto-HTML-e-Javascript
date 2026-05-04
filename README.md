@@ -50,7 +50,7 @@ git clone https://github.com/LJPF7/Projeto-HTML-e-Javascript
 - Editar ou excluir tarefas futuras
 - Possibilidade de alterar o nome de utilizador e a palavra-passe
 - Realizar logout na conta do utilizador
-- Mostrar um Tosat do Bootstrap de seguida ao guardar um novo utilizador e ao guardar uma nova tarefa
+- Mostrar um Toast do Bootstrap de seguida ao guardar um novo utilizador e ao guardar uma nova tarefa
 
 ---
 ## Autor
